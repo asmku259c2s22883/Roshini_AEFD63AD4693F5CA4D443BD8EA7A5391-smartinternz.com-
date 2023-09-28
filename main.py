@@ -1,10 +1,15 @@
-num = int(input("Enter a number: "))    
-factorial = 1    
-if num < 0:    
-   print(" Factorial does not exist for negative numbers")    
-elif num == 0:    
-   print("The factorial of 0 is 1")    
-else:    
-   for i in range(1,num + 1):    
-       factorial = factorial*i    
-   print("The factorial of",num,"is",factorial)      
+def linear_search_product(product_list, target_product):
+    indices = []
+    for i in range(len(product_list)):
+        if product_list[i] == target_product:
+            indices.append(i)
+    return indices
+
+# Example usage:
+products = ["Apple", "Banana", "Orange", "Apple", "Grapes", "Apple"]
+target_product = "Apple"
+result = linear_search_product(products, target_product)
+if result:
+    print(f"{target_product} found at indices: {result}")
+else:
+    print(f"{target_product} not found in the list.")
